@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 아래의 DTD 내용을 토대로 XML 문서를 완성한다.  -->
+<!-- 데이터는 자신이 좋아하는 가수의 곡 정보를 3곡 이상 등록한다. -->
+
+<!DOCTYPE compactDiscs
+[
+<!ELEMENT compactDiscs (compactDisc+)>
+<!ELEMENT compactDisc (artist, title, tracks, price)>
+<!ELEMENT artist (#PCDATA)>
+<!ATTLIST artist type (individual | band) #REQUIRED >
+<!ELEMENT title (#PCDATA) >
+<!ATTLIST title numberOfTracks CDATA #REQUIRED>
+<!ELEMENT tracks (track+) >
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT track (#PCDATA)>
+]>
+<compactDiscs>
+	<compactDisc>
+		<artist type="band">방탄</artist>
+		<title numberOfTracks="">봄날</title>
+		<tracks>
+			<track>1</track>
+			<track>2</track>
+			<track>3</track>
+		</tracks>
+		<price>500</price>
+	</compactDisc>
+	<compactDisc>
+		<artist type="band">소녀시대</artist>
+		<title numberOfTracks="">소원을말해봐</title>
+		<tracks>
+			<track>1</track>
+			<track>2</track>
+		</tracks>
+		<price>300</price>
+	</compactDisc>
+	<compactDisc>
+		<artist type="band">샤이니</artist>
+		<title numberOfTracks="">VIEW</title>
+		<tracks>
+			<track>1</track>
+			<track>2</track>
+		</tracks>
+		<price>300</price>
+	</compactDisc>
+</compactDiscs>
